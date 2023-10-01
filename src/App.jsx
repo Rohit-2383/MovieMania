@@ -21,14 +21,19 @@ const dispatch = useDispatch()
 
 // testing api
 useEffect(()=>{
-  apiTesting()
+  fetchApiConfig()
 },[])
 
-  function apiTesting(){
-     fetchData('/movie/popular')
+  function fetchApiConfig(){
+     fetchData('/configuration')
         .then((res)=>{
-          console.log(res)
-          dispatch(getApiConfig(res))
+          const url ={
+            backdrop:res.images.secure_base_url+"original",
+            poster:res.images.secure_base_url+"original",
+            profile:res.images.secure_base_url+"original"
+          }
+          dispatch(getApiConfig(url))
+          console.log(url)
         })
   }
   return (
