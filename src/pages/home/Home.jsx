@@ -8,6 +8,7 @@ import React from 'react'
   return (
     <div>
       <Hero/>
+      <div style={{height:1000}}></div>
     </div>
   )
 }
