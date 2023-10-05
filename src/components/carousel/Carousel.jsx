@@ -15,7 +15,7 @@ import Rating from '../rating/Rating';
 import Genres from '../genres/Genres';
 
 
-const Carousel = ({data,loading}) => {
+const Carousel = ({data,loading,endPoint}) => {
 
     const carosuelContainer = useRef()
     const navigate = useNavigate()
@@ -66,7 +66,7 @@ const Carousel = ({data,loading}) => {
                                 return (
                                     <div className='carouselItem'
                                     key={item.id}
-                                    onClick={()=>navigate(`/${item.media_type}/${item.id}`)}
+                                    onClick={()=>navigate(`/${item.media_type || endPoint}/${item.id}`)}
                                     >
                                      <div className='posterBlock'>
                                         <LazyImage src={posterURL}/>
