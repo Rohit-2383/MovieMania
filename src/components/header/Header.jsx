@@ -21,6 +21,10 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    useEffect(()=>{
+      window.scrollTo(0,0)
+    },[location])
+
     function navigateScroll(){
       if(window.scrollY>200){
         if(window.scrollY>lastScrollY&&!mobileMenu){
