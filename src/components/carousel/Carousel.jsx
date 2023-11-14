@@ -15,7 +15,7 @@ import Rating from '../rating/Rating';
 import Genres from '../genres/Genres';
 
 
-const Carousel = ({data,loading,endPoint}) => {
+const Carousel = ({data,loading,endPoint,title}) => {
 
     const carosuelContainer = useRef()
     const navigate = useNavigate()
@@ -48,6 +48,7 @@ const Carousel = ({data,loading,endPoint}) => {
   return (
     <div className='carousel'>
         <WrapContent>
+            {title && <div className='carouselTitle'>{title}</div>}
             <BsFillArrowLeftCircleFill
                 className='carouselLeftNav  arrow'
                 onClick={()=>handleNavigate('left')}
