@@ -78,7 +78,12 @@ const Header = () => {
     return (
        <header className={`header ${mobileMenu?'mobile-view':''} ${show}`}>
         <WrapContent>
-          <div className="header-logo">
+          <div 
+          className="header-logo"
+          onClick={()=>{
+            navigate("/")
+          }}
+          >
             <img src={logo} alt="" />
           </div>
           <ul className="header-items">
