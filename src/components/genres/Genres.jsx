@@ -9,9 +9,10 @@ import { useSelector } from 'react-redux'
   return (
     <div className="genres">
         {
-            data?.map(g=>{
+            data?.map((g,i)=>{
                 return (
-                    <div className="genre">
+                    <div  key={i}
+                    className="genre">
                         {genres[g]?.name}
                     </div>
                 )

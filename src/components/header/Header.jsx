@@ -91,6 +91,7 @@ const Header = () => {
             <li className="header-item" onClick={()=>handleNavigation('tv')}>TV Shows</li>
             <li className="header-item">
               <HiOutlineSearch
+              onClick={openSearch}
               />
             </li>
           </ul>
