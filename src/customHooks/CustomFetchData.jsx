@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { fetchData } from '../utils/apiSetup'
 
-const customFetchData = (url) => {
+const CustomFetchData = (url) => {
 
     const [loading,setloading]=useState(null)
     const [data,setData]=useState(null)
@@ -28,4 +28,4 @@ const customFetchData = (url) => {
    
 }
 
-export default customFetchData
+export default CustomFetchData

@@ -1,10 +1,10 @@
 import React from "react";
 
 import Carousel from "../../../components/carousel/Carousel";
-import customFetchData from "../../../customHooks/customFetchData"
+import CustomFetchData from "../../../customHooks/CustomFetchData"
 
 const Recommendation = ({ mediaType, id }) => {
-    const { data, loading, error } = customFetchData(
+    const { data, loading, error } = CustomFetchData(
         `/${mediaType}/${id}/recommendations`
     );
 

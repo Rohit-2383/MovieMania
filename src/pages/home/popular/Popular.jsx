@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 import Tabswitcher from '../../../components/tabSwitcher/Tabswitcher'
 import {WrapContent} from '../../../components/wrapContent/WrapContent'
-import customFetchData from '../../../customHooks/customFetchData'
+import CustomFetchData from '../../../customHooks/CustomFetchData'
 import Carousel from '../../../components/carousel/Carousel'
 
 const Popular = () => {
@@ -15,7 +15,7 @@ const Popular = () => {
  }
 
 //  api call
- const {data,loading} = customFetchData(`/${endPoint}/popular`)
+ const {data,loading} = CustomFetchData(`/${endPoint}/popular`)
 
 
   return (

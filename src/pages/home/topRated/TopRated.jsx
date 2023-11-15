@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 import Tabswitcher from '../../../components/tabSwitcher/Tabswitcher'
 import {WrapContent} from '../../../components/wrapContent/WrapContent'
-import customFetchData from '../../../customHooks/customFetchData'
+import CustomFetchData from '../../../customHooks/CustomFetchData'
 import Carousel from '../../../components/carousel/Carousel'
 
 const TopRated = () => {
@@ -15,7 +15,7 @@ const TopRated = () => {
  }
 
 //  api call
- const {data,loading} = customFetchData(`/${endPoint}/top_rated`)
+ const {data,loading} = CustomFetchData(`/${endPoint}/top_rated`)
 
 
   return (

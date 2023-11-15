@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 
 import {WrapContent} from '../../../components/wrapContent/WrapContent'
 
-import customFetchData from '../../../customHooks/customFetchData'
+import CustomFetchData from '../../../customHooks/CustomFetchData'
 import Genres from "../../../components/genres/Genres";
 import Rating from "../../../components/rating/Rating";
 import LazyImage from "../../../components/lazyImage/LazyImage"
@@ -21,7 +21,7 @@ const DetailsBanner = ({ video, crew }) => {
     const [show,setShow] = useState(false)
     const [videoId,setVideoId] = useState(null)
     const {mediaType ,id} = useParams()
-    const {data,loading} = customFetchData(`/${mediaType}/${id}`)
+    const {data,loading} = CustomFetchData(`/${mediaType}/${id}`)
 
     const {url} = useSelector(state=>state.home)
 

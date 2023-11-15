@@ -3,7 +3,7 @@ import './heroStyle.scss'
 
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import customFetchData from '../../../customHooks/customFetchData'
+import CustomFetchData from '../../../customHooks/CustomFetchData'
 import { useSelector } from 'react-redux'
 
 import LazyImage from '../../../components/lazyImage/LazyImage'
@@ -19,7 +19,7 @@ const Hero = () => {
   const navigate = useNavigate()
   const {url} = useSelector(state=>state.home)
 
-  const {data,loading}=customFetchData('/movie/upcoming')
+  const {data,loading}=CustomFetchData('/movie/upcoming')
 
   function handleSearch(e){
     if(e.key==='Enter'&&query.length>0){

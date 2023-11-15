@@ -1,10 +1,10 @@
 import React from "react";
 
 import Carousel from "../../../components/carousel/Carousel";
-import customFetchData from "../../../customHooks/customFetchData"
+import CustomFetchData from "../../../customHooks/CustomFetchData"
 
 const Similar = ({ mediaType, id }) => {
-    const { data, loading, error } = customFetchData(`/${mediaType}/${id}/similar`);
+    const { data, loading, error } = CustomFetchData(`/${mediaType}/${id}/similar`);
 
     const title = mediaType === "tv" ? "Similar TV Shows" : "Similar Movies";
 

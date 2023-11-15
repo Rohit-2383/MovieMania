@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Tabswitcher from '../../../components/tabSwitcher/Tabswitcher'
 import {WrapContent} from '../../../components/wrapContent/WrapContent'
-import customFetchData from '../../../customHooks/customFetchData'
+import CustomFetchData from '../../../customHooks/CustomFetchData'
 import Carousel from '../../../components/carousel/Carousel'
 
 const Trending = () => {
@@ -14,7 +14,7 @@ const Trending = () => {
  }
 
 //  api call
- const {data,loading} = customFetchData(`/trending/movie/${endPoint}`)
+ const {data,loading} = CustomFetchData(`/trending/movie/${endPoint}`)
 
 
   return (
