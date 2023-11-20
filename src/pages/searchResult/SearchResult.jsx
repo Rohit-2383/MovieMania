@@ -76,7 +76,12 @@ export const SearchResult = () => {
                   </InfiniteScroll>
                 </>
               ):(
+                <>
                 <span className='resultNotFound'>No results for {query} !!!</span>
+                <div className='resultNotFoundImage'>
+                <img src={noResults}  />
+                </div>
+                </>
               )
             }
           </WrapContent>

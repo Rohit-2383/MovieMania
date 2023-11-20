@@ -1,12 +1,18 @@
+import React from "react";
 
-import './page404Style.scss'
+import "./style.scss";
 
-import React from 'react'
+import { WrapContent } from "../../components/wrapContent/WrapContent";
 
-export const Page404 = () => {
-  return (
-    <div>Page404</div>
-  )
-}
+const Page404 = () => {
+    return (
+        <div className="pageNotFound">
+            <WrapContent>
+                <span className="bigText">404</span>
+                <span className="smallText">Page not found!</span>
+            </WrapContent>
+        </div>
+    );
+};
 
-export default Page404
+export default Page404;
